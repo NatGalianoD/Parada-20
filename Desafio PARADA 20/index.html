@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR ">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Eleição</title>
+        <style>
+            body{
+                background: white;
+            }
+
+            #resultado{
+                margin: 0 auto;
+                margin-top: 15%;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                width: 600px;
+                height: 400px;
+                background: #6FCAC5;
+                border: 2px solid black;
+                box-shadow: 2px 2px 2px black;
+            }        
+        </style>
+    </head>
+
+    <body>
+        
+        <div id="resultado">
+            <h1>Eleição 2023</h1>
+            <h2 id="voto1" style="color: #EF518C;"></h2>
+            <h2 id="voto2" style="color: #EF518C;"></h2>
+            <h2 id="voto3" style="color: #EF518C"></h2>
+            <h2 id="voto4" style="color: #EF518C;"></h2>
+            <h2 id="voto5" style="color: #EF518C;"></h2>
+        </div>
+
+        <script>
+              var voto, voto1=0, voto2=0, voto3=0, voto4=0, voto5=0;
+
+
+                do {
+                    voto = prompt("Informe o numero correspondente ao seu canditado: \n 1 - Natalia \n 2 - Julia \n 3 - Luiza \n 4 - Rafael \n 5 - Nulo \n 6 - Sair ");
+
+                switch (voto) {
+                    case "1":
+                        voto1 += 1;
+                        break;
+                    case "2":
+                        voto2 += 1;
+                        break;
+                    case "3":
+                        voto3 += 1;
+                        break;
+                    case "4":
+                        voto4 += 1;
+                        break;
+                    case "5":
+                        voto5 += 1;
+                        break;
+                    case "6":
+                        break;
+                    
+                    default:
+                        alert("Opção inválida!");
+                        break;
+                    }
+
+                } while (voto != 6);
+
+                    document.getElementById("voto1").innerHTML = `Votos para Natalia: ${voto1} <br>`;
+                    document.getElementById("voto2").innerHTML = `Votos para Julia: ${voto2} <br>`;
+                    document.getElementById("voto3").innerHTML = `Votos para Luiza: ${voto3} <br>`;
+                    document.getElementById("voto4").innerHTML = `Votos para Rafael: ${voto4} <br>`;
+                    document.getElementById("voto5").innerHTML = `Votos para Nulo: ${voto5} <br>`;
+                    
+
+            
+        </script>
+    </body>
+</html>
